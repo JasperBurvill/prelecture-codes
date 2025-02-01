@@ -13,7 +13,10 @@ int main()
     std::cout<<"Sorry, your input was not valid, please enter a year: "; 
     // Clear fail bit and ignore bad input
     std::cin.clear(); 
-    std::cin.ignore('\n'); // Adding '\n' skips to the next new line
+    // Skip all characters until newline is reached
+    while (std::cin.get() != '\n') {
+        // Continue skipping characters until the newline is found
+    }
     std::cin>>any_year;
   }
   std::cout<<"C++ is the best programming language in "<<any_year<<"!"<<std::endl;
